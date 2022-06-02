@@ -1,6 +1,7 @@
-package com.example.weatherapp.Utilities
+package com.example.weatherapp.Networking
 
 import com.example.weatherapp.Model.ModelClass
+import kotlinx.coroutines.Deferred
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -12,7 +13,6 @@ interface ApiInterface {
                             @Query("lon") longitude:String,
                             @Query("APPID") api_key:String
     ):Call<ModelClass>
-
 
 
 

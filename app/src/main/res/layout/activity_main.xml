@@ -30,16 +30,16 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/purple_500">
+                android:background="#8DC3DA">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_50sdp"
                     android:layout_margin="@dimen/_10sdp"
-                    app:cardCornerRadius="@dimen/_5sdp">
+                    app:cardCornerRadius="@dimen/_9sdp">
 
                     <EditText
-                        android:id="@+id/ed_get_city_name"
+                        android:id="@+id/et_get_city_name"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/white"
@@ -61,137 +61,148 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/rl_sub_layout"
+            android:background="#8DC3DA"
             android:layout_below="@id/cv_toolbar">
 
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:id="@+id/iv_weather_bg"
-                    android:src="@drawable/snow_bg">
-
-                </ImageView>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
                     android:orientation="vertical">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tv_date_time"
-                        android:text=" 9 January , 2:41 PM"
-                        android:fontFamily="@font/googlesansmedium"
-                        android:textSize="@dimen/_15ssp"
-                        android:textColor="@color/black"
-                        >
-                    </TextView>
-
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="@dimen/_10sdp">
+                        android:layout_gravity="left"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/tv_day_max_temp"
-                            android:text="Day 17"
-                            android:layout_weight="3"
-                            android:fontFamily="@font/googlesansmedium"
-                            android:textSize="@dimen/_15ssp"
-                            android:textColor="@color/white"
-                            >
-                        </TextView>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/tv_day_min_temp"
-                            android:text="Day 17"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/googlesansmedium"
-                            android:textSize="@dimen/_15ssp"
-                            android:textColor="@color/white"
-                            >
-                        </TextView>
-
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="@dimen/_10sdp">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/tv_temp"
-                            android:text="16 *"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/googlesansmedium"
-                            android:textSize="@dimen/_65ssp"
-                            android:textColor="@color/white"
-                            >
-                        </TextView>
                         <ImageView
-                            android:layout_width="@dimen/_90sdp"
-                            android:layout_height="@dimen/_80sdp"
-                            android:id="@+id/iv_weather_icon"
-                            android:layout_marginTop="@dimen/_10sdp"
-                            android:layout_marginEnd="@dimen/_10sdp"
-                            android:src="@drawable/clear"
-                            >
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:src="@drawable/location">
+
                         </ImageView>
 
+                        <TextView
+                            android:id="@+id/city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_16sdp"
+                            android:textStyle="bold">
 
 
+                        </TextView>
                     </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_date_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/googlesansmedium"
+                        android:text=" 9 January , 2:41 PM"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15ssp"></TextView>
+
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="@dimen/_10sdp">
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
 
                         <TextView
+                            android:id="@+id/tv_day_max_temp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/tv_feels_like"
-                            android:text="Feels a like 16 *"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/googlesansmedium"
-                            android:textSize="@dimen/_15ssp"
-                            android:textColor="@color/white"
-                            >
-                        </TextView>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/tv_weather_type"
-                            android:text="Drizzle"
                             android:layout_weight="3"
                             android:fontFamily="@font/googlesansmedium"
-                            android:textSize="@dimen/_15ssp"
-                            android:textColor="@color/white"
-                            >
-                        </TextView>
+                            android:text="Day 17"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15ssp"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_day_min_temp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/googlesansmedium"
+                            android:text="Day 17"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15ssp"></TextView>
 
 
                     </LinearLayout>
 
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_temp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/googlesansmedium"
+                            android:text="16 *"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_65ssp"></TextView>
+
+                        <ImageView
+                            android:id="@+id/iv_weather_icon"
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:src="@drawable/clear"></ImageView>
 
 
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_feels_like"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/googlesansmedium"
+                            android:text="Feels a like 16 *"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15ssp"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_weather_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:fontFamily="@font/googlesansmedium"
+                            android:text="Drizzle"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15ssp"></TextView>
+
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -219,7 +230,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/snow_bg"
+                        android:background="#E2EBFA"
                         android:orientation="horizontal"
                         android:id="@+id/ll_main_bg_above"
                         >
@@ -248,19 +259,19 @@
                                     android:id="@+id/pressure"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:gravity="center_horizontal"
                                     android:fontFamily="@font/googlesansmedium"
+                                    android:gravity="center_horizontal"
                                     android:text="100"
-                                    android:textColor="@color/white"
+                                    android:textColor="@color/black"
                                     android:textSize="@dimen/_13ssp"></TextView>
 
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:gravity="center_horizontal"
                                     android:fontFamily="@font/googlesansmedium"
+                                    android:gravity="center_horizontal"
                                     android:text="Pressure"
-                                    android:textColor="@color/white"
+                                    android:textColor="@color/black"
                                     android:textSize="@dimen/_13ssp">
 
                                 </TextView>
@@ -298,7 +309,7 @@
                                     android:gravity="center_horizontal"
                                     android:fontFamily="@font/googlesansmedium"
                                     android:text="100"
-                                    android:textColor="@color/white"
+                                    android:textColor="@color/black"
                                     android:textSize="@dimen/_13ssp"></TextView>
 
                                 <TextView
@@ -306,8 +317,8 @@
                                     android:layout_height="wrap_content"
                                     android:gravity="center_horizontal"
                                     android:fontFamily="@font/googlesansmedium"
-                                    android:text="Pressure"
-                                    android:textColor="@color/white"
+                                    android:text="humidity"
+                                    android:textColor="@color/black"
                                     android:textSize="@dimen/_13ssp">
 
                                 </TextView>
@@ -345,7 +356,7 @@
                                     android:gravity="center_horizontal"
                                     android:fontFamily="@font/googlesansmedium"
                                     android:text="100"
-                                    android:textColor="@color/white"
+                                    android:textColor="@color/black"
                                     android:textSize="@dimen/_13ssp">
 
                                 </TextView>
@@ -355,8 +366,8 @@
                                     android:layout_height="wrap_content"
                                     android:gravity="center_horizontal"
                                     android:fontFamily="@font/googlesansmedium"
-                                    android:text="Pressure"
-                                    android:textColor="@color/white"
+                                    android:text="wind peed"
+                                    android:textColor="@color/black"
                                     android:textSize="@dimen/_13ssp">
 
                                 </TextView>
@@ -373,7 +384,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/snow_bg"
+                        android:background="#E2EBFA"
                         android:orientation="horizontal"
                         android:id="@+id/ll_main_bg_below"
                         >
@@ -407,7 +418,7 @@
                                     android:gravity="center_horizontal"
                                     android:fontFamily="@font/googlesansmedium"
                                     android:text="100"
-                                    android:textColor="@color/white"
+                                    android:textColor="@color/black"
                                     android:textSize="@dimen/_13ssp">
 
                                 </TextView>
@@ -417,8 +428,8 @@
                                     android:layout_height="wrap_content"
                                     android:gravity="center_horizontal"
                                     android:fontFamily="@font/googlesansmedium"
-                                    android:text="Pressure"
-                                    android:textColor="@color/white"
+                                    android:text="sunrise"
+                                    android:textColor="@color/black"
                                     android:textSize="@dimen/_13ssp">
 
                                 </TextView>
@@ -456,7 +467,7 @@
                                     android:gravity="center_horizontal"
                                     android:fontFamily="@font/googlesansmedium"
                                     android:text="100"
-                                    android:textColor="@color/white"
+                                    android:textColor="@color/black"
                                     android:textSize="@dimen/_13ssp">
 
                                 </TextView>
@@ -466,8 +477,8 @@
                                     android:layout_height="wrap_content"
                                     android:gravity="center_horizontal"
                                     android:fontFamily="@font/googlesansmedium"
-                                    android:text="Pressure"
-                                    android:textColor="@color/white"
+                                    android:text="sunset"
+                                    android:textColor="@color/black"
                                     android:textSize="@dimen/_13ssp">
 
                                 </TextView>
@@ -503,7 +514,7 @@
                                     android:gravity="center_horizontal"
                                     android:fontFamily="@font/googlesansmedium"
                                     android:text="100"
-                                    android:textColor="@color/white"
+                                    android:textColor="@color/black"
                                     android:textSize="@dimen/_13ssp"></TextView>
 
                                 <TextView
@@ -511,8 +522,8 @@
                                     android:layout_height="wrap_content"
                                     android:gravity="center_horizontal"
                                     android:fontFamily="@font/googlesansmedium"
-                                    android:text="Pressure"
-                                    android:textColor="@color/white"
+                                    android:text="temp farenhite"
+                                    android:textColor="@color/black"
                                     android:textSize="@dimen/_13ssp">
 
                                 </TextView>
